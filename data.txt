@@ -1,0 +1,58 @@
+
+Supplier Data 8081
+{
+    "supplierId": 1,
+    "firstName": "abc",
+    "lastName": "defghj",
+    "companyName": "xyz",
+    "contactNo": 9019027398,
+    "email": "xyz@gmail.com",
+    "password":"dummy",
+    "address": "Bhimnagar"
+}
+
+
+Product Data 8082
+{
+    "productId": 1,
+    "productName": "Oppo",
+    "productDescription": "Phone",
+    "productType": "Smart Phone",
+    "supplierId": 1,
+    "unitPrice": 18999.0,
+    "availableQty": 3
+}
+
+Customer Data 8083
+{
+    "customerId": 2,
+    "customerName": "Customer",
+    "password": "cust1",
+    "contactNo": 9876543210,
+    "email": "customer@gmail.com",
+    "permenentAddress": "cust address",
+    "shippingAddress": "ship address"
+}
+
+Shipper Data 8084
+{
+    "shipperId": 1,
+    "companyName": "shipping company",
+    "contactNo": 8765432109,
+    "email": "shipper@gmail.com",
+    "password": "ship1",
+    "address": "Bengaluru"
+}
+
+Order Data 8085
+insert into ORDERS (ORDER_ID ,CUSTOMER_ID ,ORDER_DELEVERY_DATE ,ORDER_DISPATCH_DATE ,ORDER_PLACED_DATE ,PAYMENT_ID ,PRODUCT_ID ,SHIPPER_ID ) values(1,1,'2022-06-15','2022-06-12','2022-06-08',1,1,1)
+{
+    "orderId": 3,
+    "orderPlacedDate": "2022-06-08",
+    "orderDispatchDate": "2022-06-12",
+    "orderDeleveryDate": "2022-06-15",
+    "paymentId": 1,
+    "customerId": 1,
+    "productId": 1,
+    "shipperId": 1
+}
