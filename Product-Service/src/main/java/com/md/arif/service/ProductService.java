@@ -19,11 +19,14 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productrepository;
 	
+//	@Autowired
+//	private SupplierFeignClient supplierFeignClient;
+	
 	@Autowired
-	private SupplierFeignClient supplierFeignClient;
+	private Resilience4jconfiguration resilience4jconfig;
 	
 	public ProductDetails addProduct(Product product) {
-		SupplierDetails  sr = supplierFeignClient.getSupplierById(product.getSupplierId());
+		SupplierDetails  sr = resilience4jconfig.getSupplierById(product.getSupplierId());
 		
 		Product pro = productrepository.save(product);
 		
@@ -40,7 +43,9 @@ public class ProductService {
 	public ProductDetails getProductById(int productId){
 		Optional<Product>  product= productrepository.findById(productId);
 		ProductDetails pr = new ProductDetails(product.get());
-		pr.setSupplierDetails(supplierFeignClient.getSupplierById(product.get().getSupplierId()));
+		
+		//pr.setSupplierDetails(supplierFeignClient.getSupplierById(product.get().getSupplierId()));
+		pr.setSupplierDetails(resilience4jconfig.getSupplierById(product.get().getSupplierId()));
 		
 		return pr;
 	}
