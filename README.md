@@ -39,3 +39,6 @@ Respective url's for config server to read properties defined in git repository
 
 Spring actuator url to check health of the supplier service which is implemented inside the product service
 http://localhost:8082/actuator/health
+
+Spring actuator url to refresh properties of the supplier service
+http://localhost:8081/actuator/refresh
