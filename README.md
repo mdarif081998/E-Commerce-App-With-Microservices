@@ -33,9 +33,12 @@ Respective service url's with Api-Gateway
 Respective url's for config server to read properties defined in git repository
 1. http://localhost:8888/supplier-service/default
 2. http://localhost:8888/product-service/default
-3. http://localhost:8888/customer-service/default
-4. http://localhost:8888/shipper-service/default
-5. http://localhost:8888/order-service/default
+
+url for distributed tracing with slueth - zipkin
+http://localhost:9411/zipkin/traces/5f25ac06f55f01db
+4. http://localhost:8888/customer-service/default
+5. http://localhost:8888/shipper-service/default
+6. http://localhost:8888/order-service/default
 
 Spring actuator url to check health of the supplier service which is implemented inside the product service
 http://localhost:8082/actuator/health
